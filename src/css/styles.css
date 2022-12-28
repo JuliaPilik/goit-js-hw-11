@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#search-box {
+  position: relative;
+  font: inherit;
+  padding: 8px;
+  width: 320px;
+
+  border: grey;
+  border-radius: 4px;
+  height: 40px;
+
+  /*padding: 15px 16px;*/
+  font-size: 16px;
+  line-height: 1.25;
+  color: grey;
+}
+#search-box:focus {
+  outline: 0;
+}
+.search-form {
+  background-color: #3f56b1;
+}
+.form-wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.search-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  /*border-radius: 4px;*/
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: grey;
+  z-index: 1;
+  cursor: pointer;
+  left: 280px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.photo-card {
+  width: calc(((100% - 3 * 30px)) / 4);
+  margin-right: 30px;
+  margin-top: 30px;
+  /*margin-left: 15px;*/
+  /*flex-grow: 1;*/
+
+  background-color: white;
+  /* flex-basis: calc((100% - var(--team-list-gap)*3)/4);*/
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+}
+.photo-card:nth-child(4n) {
+  margin-right: 0;
+}
+.info {
+  display: flex;
+  font-size: 14px;
+}
+.info-item {
+  text-align: center;
+}
+.container {
+  text-align: center;
+}
+.load-more {
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: #3f56b1;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  /*transition: background-color var(--timing-function);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
