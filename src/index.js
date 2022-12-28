@@ -78,15 +78,18 @@ function messageNotiflix(total) {
 }
 
 function makeVisibleLoadMoreButton() {
+   refs.messageContainer.innerHTML = "";
   if ((totalPages>0) && (currentPage < totalPages)) {
     refs.loadMore.classList.remove("is-hidden");
+  } else if((totalPages>0) && (currentPage === totalPages)) {
+    refs.messageContainer.innerHTML = "We're sorry, but you've reached the end of search results.";
+    refs.loadMore.classList.add("is-hidden");
   } else {
     refs.loadMore.classList.add("is-hidden");
-     if (totalPages > 0) {
-      refs.messageContainer.innerHTML = "We're sorry, but you've reached the end of search results.";
-    }
   }
-}
+  
+  }
+
 function createElementsImages(images) {
     return images.map(({ id, pageURL, webformatURL, largeImageURL, likes, views, comments, downloads,tags }) => {
         return `<div class="photo-card">
